@@ -27,7 +27,9 @@ a{color:inherit}
 
 /* top bar */
 .top{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:16px;flex-wrap:wrap;position:sticky;top:0;z-index:50;background:rgba(10,22,40,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);margin-inline:-16px;padding-inline:16px}
-.brand{font-family:var(--display);font-weight:800;font-size:1.15rem;letter-spacing:-.02em;text-decoration:none}
+.brand{font-family:var(--display);font-weight:800;font-size:1.15rem;letter-spacing:-.02em;text-decoration:none;
+ display:inline-flex;align-items:center;gap:10px}
+.blogo{width:34px;height:34px;border-radius:8px;display:block}
 .brand .cur{color:var(--lagoa)}
 .top nav{display:flex;gap:20px;flex-wrap:wrap}
 .top nav a{text-decoration:none;font-size:.92rem;color:var(--muted)}
@@ -48,6 +50,7 @@ a{color:inherit}
 @keyframes bob{50%{transform:translateY(6px)}}
 @media (prefers-reduced-motion:reduce){.down{animation:none}}
 .hero .readout{justify-content:center}
+.herologo{width:76px;height:76px;border-radius:18px;display:block;margin:0 auto 16px}
 .hero .word{font-family:var(--display);font-weight:800;font-size:clamp(1.25rem,3.2vw,1.75rem);
  line-height:1;letter-spacing:-.02em;margin:0 0 20px;color:var(--ink)}
 .cur{animation:blink 1.1s steps(1) infinite;color:var(--lagoa)}
@@ -207,7 +210,7 @@ footer .brand{font-size:1rem}
 
 <div class="wrap">
   <header class="top">
-    <a class="brand" href="#inicio">geografia analítica<span class="cur">_</span></a>
+    <a class="brand" href="#inicio"><img class="blogo" src="logo.png" alt="">geografia analítica<span class="cur">_</span></a>
     <nav aria-label="Menu"><a href="#inicio">Início</a><a href="#servicos">Serviços</a><a href="#curso">Curso MEI</a><a href="#ajuda">Ajuda</a><a href="#contato">Contato</a><a href="https://www.instagram.com/geografia.analitica/" target="_blank" rel="noopener">Instagram ↗</a></nav>
   </header>
 
@@ -216,9 +219,10 @@ footer .brand{font-size:1rem}
 <div class="hero">
     <canvas id="field" aria-hidden="true"></canvas>
     <div class="readout" aria-hidden="true"><span>lat <b>−9.6658</b></span><span>lon <b>−35.7353</b></span><span>Maceió · AL</span><span id="ro-z">curvas: <b>—</b></span></div>
+    <img class="herologo" src="logo.png" alt="Geografia Analítica">
     <p class="word">geografia analítica<span class="cur">_</span></p>
     <h1 class="claim">Dados e tecnologia aplicados ao território, <em>para decidir com número e não com palpite</em></h1>
-    <p class="sub">Um projeto de Layê, profissional de geografia e dados em Maceió. Análise espacial, geomarketing e inteligência artificial — e também criação de sites e formação para quem está começando um negócio.</p>
+    <p class="sub">Um projeto de Layê, profissional de geografia e dados em Maceió. Análise espacial, geomarketing e inteligência artificial — e também design, criação de sites e formação para quem está começando um negócio.</p>
     <div class="cta"><a class="btn primary" href="#contato">Pedir orçamento</a><a class="btn" href="#curso">Conhecer o curso de MEI</a></div>
     <a class="down" href="#servicos" aria-label="Ver serviços">▾</a>
   </div>
@@ -227,6 +231,7 @@ footer .brand{font-size:1rem}
     <a class="dcard" href="#servicos"><span class="k">SERVIÇO</span><h3>Dados e IA no território</h3><p>Análise espacial, satélite e automação de mapas.</p><span class="go">Ver serviços →</span></a>
     <a class="dcard" href="#servicos"><span class="k">SERVIÇO</span><h3>Geomarketing</h3><p>Onde abrir, quem atender, até onde entregar.</p><span class="go">Ver serviços →</span></a>
     <a class="dcard" href="#servicos"><span class="k">SERVIÇO</span><h3>Criação de sites</h3><p>Endereço próprio na internet, com contato que funciona.</p><span class="go">Ver serviços →</span></a>
+    <a class="dcard" href="#servicos"><span class="k">SERVIÇO</span><h3>Design e peças</h3><p>Identidade, cards, convites, pôsteres e portfólios.</p><span class="go">Ver serviços →</span></a>
     <a class="dcard hl" href="#curso"><span class="k">CURSO</span><h3>MEI do zero ao primeiro ano</h3><p>Dez módulos, apostila em PDF, turma ou individual.</p><span class="go">Conhecer o curso →</span></a>
   </div>
 
@@ -284,7 +289,7 @@ footer .brand{font-size:1rem}
       <div>
         <div class="text">
           <h2 style="font-size:clamp(1.9rem,4.5vw,3rem);font-weight:800;letter-spacing:-.025em">Dados, tecnologia e território.</h2>
-          <p>Geografia Analítica trabalha com dados e tecnologia aplicados a problemas concretos: de análise de território e geomarketing a sites, automações e formação para quem está começando um negócio.</p>
+          <p>Geografia Analítica trabalha com dados e tecnologia aplicados a problemas concretos: de análise de território e geomarketing a design, sites, automações e formação para quem está começando um negócio.</p>
         </div>
         <div class="principles">
           <div><h3>Dado não é neutro</h3><p>Todo mapa depende de quem mede e do que fica de fora. As duas coisas são mostradas.</p></div>
@@ -353,6 +358,31 @@ footer .brand{font-size:1rem}
   </section>
   </div>
 
+  <div class="view" id="materiais">
+  <section>
+    <div class="sh"><span class="eyebrow">Oficina de portfólio artístico</span><h2>Materiais da oficina</h2></div>
+    <div class="demo">
+      <span class="badge">PLANTANDO SABERES, COLHENDO POSSIBILIDADES · 31/10/2026</span>
+      <p style="color:var(--muted);max-width:68ch;margin:0 0 6px">Tudo o que foi usado e prometido na oficina de produção de portfólio, conduzida por Layê Moura na Casa Verde, no Tabuleiro, em Maceió. É de graça, pode baixar, copiar e usar em quantos editais quiser.</p>
+      <div class="mod"><h4>1 · Slides da oficina</h4><p>A apresentação inteira em PDF, 18 páginas: a diferença entre portfólio artístico e portfólio de edital, o que conta como prova, os seis passos da montagem, o que precisa ter em cada uma das quatro partes e os erros que custam ponto.</p></div>
+      <div class="cta" style="margin:-6px 0 18px">
+        <button class="btn primary" type="button" id="dl-slides">Baixar os slides (PDF)</button>
+        <span id="dl-slides-hint" style="color:var(--muted);font-size:.92rem"></span>
+      </div>
+      <div class="mod"><h4>2 · Dois modelos de portfólio no Canva</h4><p>Modelos editáveis, já na estrutura das quatro partes: identificação, trajetória, lista de atividades e anexos de prova. Duplique o modelo antes de editar, para o original ficar guardado para o próximo edital. <b id="link-modelos">O link é publicado aqui assim que os modelos forem liberados.</b></p></div>
+      <div class="mod"><h4>3 · Checklist “Portfólio que pontua”</h4><p>Duas páginas para imprimir frente e verso, com quadradinhos para marcar: o que conta como prova, os seis passos, as quatro partes do arquivo e as doze conferências antes de enviar. É o mesmo que foi entregue impresso na oficina.</p></div>
+      <div class="cta" style="margin:-6px 0 18px">
+        <button class="btn primary" type="button" id="dl-checklist">Baixar o checklist (PDF)</button>
+        <span id="dl-checklist-hint" style="color:var(--muted);font-size:.92rem"></span>
+      </div>
+      <div class="mod"><h4>4 · Vídeo explicativo no YouTube</h4><p>O passo a passo da montagem no Canva, para rever em casa com calma: duplicar o modelo, trocar a identificação, inserir as provas com legenda e baixar em PDF padrão. <b id="link-video">O link é publicado aqui assim que o vídeo estiver no ar.</b></p></div>
+      <div class="mod"><h4>A regra que vale para tudo</h4><p>O portfólio bonito conta a história. O portfólio que pontua conta a mesma história com provas. Cada atividade listada precisa de um documento ao lado, com data e origem — e com o mesmo número da lista.</p></div>
+      <p class="demonote">Esteve na oficina e precisa de alguma coisa que ainda não está aqui? Chame no WhatsApp que eu envio.</p>
+      <div class="cta" style="margin-top:18px"><a class="btn" href="#inicio">← Conhecer o Geografia Analítica</a><a class="btn primary" href="https://wa.me/5582994281968?text=Ol%C3%A1%2C%20Lay%C3%AA!%20Estive%20na%20oficina%20de%20portf%C3%B3lio%20e%20queria%20os%20materiais." target="_blank" rel="noopener">Falar no WhatsApp</a></div>
+    </div>
+  </section>
+  </div>
+
   <div class="view" id="servicos">
   <section>
     <div class="sh"><span class="eyebrow">Serviços</span><h2>Serviços</h2></div>
@@ -378,6 +408,12 @@ footer .brand{font-size:1rem}
         <ul><li>Site institucional, página de serviços ou catálogo</li><li>Página única para campanha, evento ou portfólio</li><li>Botão de WhatsApp, formulário de contato e integração com o Instagram</li><li>Cadastro no Google Meu Negócio e ajustes básicos de busca</li></ul><div class="deliver"><div><b>Você recebe</b><span>Site no ar, com contato ligado ao WhatsApp e orientação para atualizar sozinho</span></div><div><b>Prazo típico</b><span>Conforme o número de páginas</span></div><div><b>Combinado antes</b><span>Escopo, fontes e valor fechados na proposta</span></div></div><div class="rowcta"><a href="https://wa.me/5582994281968?text=Ol%C3%A1%2C%20Lay%C3%AA!%20Vim%20pelo%20site%20e%20queria%20falar%20sobre%20um%20projeto." target="_blank" rel="noopener">Falar sobre isso</a></div>
       </div>
       <div class="row">
+        <span class="k">DESIGN · COMUNICAÇÃO</span>
+        <div><h3>Design e comunicação visual</h3><p class="desc">Para eventos, projetos e marcas que precisam de peças prontas, com a mesma cara do começo ao fim.</p></div>
+        <ul><li>Identidade e peças de divulgação para eventos e oficinas</li><li>Cards para redes sociais, convites digitais e pôsteres</li><li>Adesivos, crachás e materiais impressos</li><li>Catálogos e portfólios em PDF, prontos para enviar ou imprimir</li><li>Cartões de visita e papelaria</li></ul>
+        <div class="deliver"><div><b>Você recebe</b><span>Arquivos prontos para publicar e para a gráfica, com os originais</span></div><div><b>Prazo típico</b><span>De alguns dias a duas semanas</span></div><div><b>Combinado antes</b><span>Escopo, peças e valor fechados na proposta</span></div></div><div class="rowcta"><a href="https://wa.me/5582994281968?text=Ol%C3%A1%2C%20Lay%C3%AA!%20Vim%20pelo%20site%20e%20queria%20falar%20sobre%20um%20projeto." target="_blank" rel="noopener">Falar sobre isso</a></div>
+      </div>
+      <div class="row">
         <span class="k">FORMAÇÃO · MEI</span>
         <div><h3>Curso para MEI: abrir, manter em dia e organizar</h3><p class="desc">Para quem trabalha por conta própria e quer formalizar o negócio sem se perder na burocracia.</p></div>
         <ul><li>O que é o MEI, quem pode ser e quanto custa por mês</li><li>Passo a passo da abertura e da emissão de nota fiscal</li><li>As obrigações do ano: DAS mensal e declaração anual</li><li>Organização das contas e primeiros passos de divulgação</li><li>Turmas ou atendimento individual, presencial em Maceió ou on-line</li></ul><div class="deliver"><div><b>Você recebe</b><span>Aulas, apostila em PDF e checklists para usar depois</span></div><div><b>Prazo típico</b><span>Combinado com a turma</span></div><div><b>Combinado antes</b><span>Escopo, fontes e valor fechados na proposta</span></div></div><div class="rowcta"><a href="https://wa.me/5582994281968?text=Ol%C3%A1%2C%20Lay%C3%AA!%20Vim%20pelo%20site%20e%20queria%20falar%20sobre%20um%20projeto." target="_blank" rel="noopener">Falar sobre isso</a></div>
@@ -388,7 +424,7 @@ footer .brand{font-size:1rem}
         <ul><li>Pré-pesquisa para podcasts, documentários e reportagens</li><li>Mapeamento de pessoas e lugares para entrevistas</li><li>Portfólios para editais culturais: organização, texto e design</li></ul><div class="deliver"><div><b>Você recebe</b><span>Dossiê, planilha de contatos ou portfólio pronto para inscrição</span></div><div><b>Prazo típico</b><span>De uma a três semanas</span></div><div><b>Combinado antes</b><span>Escopo, fontes e valor fechados na proposta</span></div></div><div class="rowcta"><a href="https://wa.me/5582994281968?text=Ol%C3%A1%2C%20Lay%C3%AA!%20Vim%20pelo%20site%20e%20queria%20falar%20sobre%20um%20projeto." target="_blank" rel="noopener">Falar sobre isso</a></div>
       </div>
     </div>
-    <div class="who" aria-label="Para quem"><span>Empresas</span><span>Pequenos negócios</span><span>MEI e autônomos</span><span>ONGs e movimentos</span><span>Pesquisadores</span><span>Produtoras e podcasts</span><span>Artistas e coletivos</span></div>
+    <div class="who" aria-label="Para quem"><span>Empresas</span><span>Pequenos negócios</span><span>MEI e autônomos</span><span>Eventos e coletivos</span><span>ONGs e movimentos</span><span>Pesquisadores</span><span>Produtoras e podcasts</span><span>Artistas e coletivos</span></div>
   </section>
 
   </div>
@@ -419,11 +455,12 @@ footer .brand{font-size:1rem}
           <div><b>Atualizado</b><span>Outubro de 2026, já com os novos tetos de 2027 e 2028 e o prazo do perdão de dívidas.</span></div>
           <div><b>Fontes</b><span>Receita Federal, Portal do Empreendedor e a legislação citada no material.</span></div>
         </div>
-        <div class="cta" style="margin-top:24px">
-          <button class="btn primary" type="button" id="dl-curso">Baixar a apostila (PDF)</button>
-          <a class="btn" href="https://wa.me/5582994281968?text=Ol%C3%A1%2C%20Lay%C3%AA!%20Quero%20saber%20sobre%20o%20curso%20de%20MEI." target="_blank" rel="noopener">Falar sobre a próxima turma</a>
+        <div class="cta" style="margin-top:24px;flex-wrap:wrap;align-items:center">
+          <input id="mei-code" type="text" autocomplete="off" spellcheck="false" placeholder="Código de acesso" aria-label="Código de acesso da apostila" style="padding:12px 16px;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:inherit;font:inherit;min-width:190px">
+          <button class="btn primary" type="button" id="mei-go">Liberar a apostila</button>
+          <a class="btn" href="https://wa.me/5582994281968?text=Ol%C3%A1%2C%20Lay%C3%AA!%20Quero%20o%20c%C3%B3digo%20de%20acesso%20da%20apostila%20do%20MEI." target="_blank" rel="noopener">Não tenho código</a>
         </div>
-        <p class="hint" style="margin-top:14px" id="dl-hint">A apostila é gratuita, em PDF. Material educativo: não substitui orientação contábil individual.</p>
+        <p class="hint" style="margin-top:14px" id="dl-hint">A apostila é gratuita, mas sai com código de acesso: ela é enviada por mim, em PDF, a quem participou de uma oficina ou pediu o código. Material educativo: não substitui orientação contábil individual.</p>
       </div>
     </div>
   </section>
@@ -539,7 +576,7 @@ footer .brand{font-size:1rem}
   </main>
 
   <footer>
-    <span class="brand">geografia analítica<span class="cur">_</span></span>
+    <span class="brand"><img class="blogo" src="logo.png" alt="">geografia analítica<span class="cur">_</span></span>
     <span class="mono">Layê · profissional de geografia e dados · Maceió, AL<br><a href="mailto:geografia.analitica@gmail.com">geografia.analitica@gmail.com</a> · <a href="https://wa.me/5582994281968" target="_blank" rel="noopener">(82) 99428-1968</a> · <a href="https://www.instagram.com/geografia.analitica/" target="_blank" rel="noopener">@geografia.analitica</a></span>
   </footer>
 </div>
@@ -582,31 +619,77 @@ footer .brand{font-size:1rem}
   })();
 
 (async()=>{
-  const btn=document.getElementById('dl-curso'), hint=document.getElementById('dl-hint');
+  const btn=document.getElementById('dl-checklist'), hint=document.getElementById('dl-checklist-hint');
   if(!btn) return;
+  const WA='https://wa.me/5582994281968?text=Ol%C3%A1%2C%20Lay%C3%AA!%20Quero%20o%20checklist%20da%20oficina%20de%20portf%C3%B3lio.';
   let dl=null;
   try{ dl = window.claude && claude.use ? await claude.use('downloads') : null; }catch(_){ dl=null; }
   if(!dl){
-    btn.textContent='Pedir a apostila pelo WhatsApp';
-    btn.onclick=()=>window.open('https://wa.me/5582994281968?text=Ol%C3%A1%2C%20Lay%C3%AA!%20Quero%20a%20apostila%20do%20curso%20de%20MEI.','_blank','noopener');
-    if(hint) hint.textContent='Neste navegador o download direto não está disponível: peça a apostila que eu envio o arquivo.';
+    btn.textContent='Pedir o checklist pelo WhatsApp';
+    btn.onclick=()=>window.open(WA,'_blank','noopener');
+    if(hint) hint.textContent='Neste navegador o download direto não está disponível.';
     return;
   }
   btn.onclick=async()=>{
     const txt=btn.textContent; btn.disabled=true; btn.textContent='Preparando...';
     try{
-      const r=await fetch('curso-mei.pdf');
+      const r=await fetch('checklist-oficina.pdf');
       if(!r.ok) throw new Error('fetch');
       const blob=await r.blob();
-      await dl.save({filename:'Curso MEI - do zero ao primeiro ano.pdf', data:blob});
-      btn.textContent='Baixado'; setTimeout(()=>{btn.textContent=txt;btn.disabled=false},2200);
-    }catch(err){
-      const code=err&&err.code;
-      if(code==='declined'){ btn.textContent=txt; btn.disabled=false; return; }
-      btn.textContent=txt; btn.disabled=false;
-      if(hint) hint.textContent='Não consegui entregar o arquivo agora. Peça pelo WhatsApp que eu envio.';
-    }
+      await dl.save({filename:'Checklist - Portfolio que pontua.pdf', data:blob});
+      btn.textContent=txt;
+    }catch(e){
+      btn.textContent=txt;
+      if(hint) hint.textContent='Não consegui baixar agora. Peça pelo WhatsApp que eu envio.';
+    }finally{ btn.disabled=false; }
   };
+})();
+
+(async()=>{
+  const btn=document.getElementById('dl-slides'), hint=document.getElementById('dl-slides-hint');
+  if(!btn) return;
+  const WA='https://wa.me/5582994281968?text=Ol%C3%A1%2C%20Lay%C3%AA!%20Quero%20os%20slides%20da%20oficina%20de%20portf%C3%B3lio.';
+  let dl=null;
+  try{ dl = window.claude && claude.use ? await claude.use('downloads') : null; }catch(_){ dl=null; }
+  if(!dl){
+    btn.textContent='Pedir os slides pelo WhatsApp';
+    btn.onclick=()=>window.open(WA,'_blank','noopener');
+    if(hint) hint.textContent='Neste navegador o download direto não está disponível.';
+    return;
+  }
+  btn.onclick=async()=>{
+    const txt=btn.textContent; btn.disabled=true; btn.textContent='Preparando...';
+    try{
+      const r=await fetch('slides-oficina.pdf');
+      if(!r.ok) throw new Error('fetch');
+      const blob=await r.blob();
+      await dl.save({filename:'Portfolio que pontua - slides da oficina.pdf', data:blob});
+      btn.textContent=txt;
+    }catch(e){
+      btn.textContent=txt;
+      if(hint) hint.textContent='Não consegui baixar agora. Peça pelo WhatsApp que eu envio.';
+    }finally{ btn.disabled=false; }
+  };
+})();
+
+(()=>{
+  const inp=document.getElementById('mei-code'), go=document.getElementById('mei-go'), hint=document.getElementById('dl-hint');
+  if(!go) return;
+  const CODE='portgeo';
+  const base=hint?hint.textContent:'';
+  const norm=v=>(v||'').normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/[^a-z0-9]/gi,'').toLowerCase();
+  const wa=t=>'https://wa.me/5582994281968?text='+encodeURIComponent(t);
+  function liberar(){
+    const v=norm(inp&&inp.value);
+    if(!v){ if(hint) hint.textContent='Digite o código de acesso. Se você ainda não tem um, use o botão “Não tenho código”.'; if(inp) inp.focus(); return; }
+    if(v!==CODE){ if(hint) hint.textContent='Esse código não confere. Confira as letras, ou peça o seu pelo WhatsApp.'; if(inp){ inp.focus(); inp.select(); } return; }
+    go.textContent='Código conferido';
+    if(hint) hint.textContent='Código conferido. Abri o WhatsApp com a mensagem pronta: é só enviar que eu te mando a apostila em PDF.';
+    window.open(wa('Olá, Layê! Meu código de acesso é '+CODE+' e eu quero a apostila do curso de MEI.'),'_blank','noopener');
+    setTimeout(()=>{ go.textContent='Liberar a apostila'; if(hint) hint.textContent=base; },12000);
+  }
+  go.onclick=liberar;
+  if(inp) inp.addEventListener('keydown',e=>{ if(e.key==='Enter'){ e.preventDefault(); liberar(); } });
 })();
 document.getElementById('copy-fone').onclick=e=>{
   const b=e.currentTarget,done=()=>{b.textContent='Copiado';setTimeout(()=>b.textContent='Copiar',1600)};
@@ -620,7 +703,7 @@ document.getElementById('copy-mail').onclick=e=>{
 };
 // troca de tela: cada item do menu abre uma view
 (function(){
-  const VIEWS=['inicio','servicos','curso','ajuda','contato','demo-painel','demo-oficina'];
+  const VIEWS=['inicio','servicos','curso','ajuda','contato','demo-painel','demo-oficina','materiais'];
   const navs=[...document.querySelectorAll('.top nav a[href^="#"]')];
   function show(id,push){
     if(!VIEWS.includes(id)) id='inicio';
